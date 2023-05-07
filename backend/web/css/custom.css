@@ -1,0 +1,26 @@
+.form-control.kv-editor-container {
+    height: 100%;
+    padding: 0;
+    border: 0;
+}
+
+.table tbody a {
+    padding-right: 10px;
+}
+
+
+.kv-file-remove {
+    display: none;
+}
+
+
+.pagination a, .pagination li.disabled > span {
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    margin: 2px;
+}
+
+.pagination li.active > a {
+    color: white;
+    background: #007bff;
+}

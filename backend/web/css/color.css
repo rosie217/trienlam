@@ -1,0 +1,48 @@
+.product-color {
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    padding: 1px 5px;
+    color: white;
+}
+
+.product-color.cam {
+    background: orange;
+}
+
+.product-color.den {
+    background: black;
+}
+
+.product-color.trang {
+    background: white;
+    color: black;
+}
+
+.product-color.xam {
+    background: gray;
+}
+
+.product-color.vang {
+    background: yellow;
+    color: black;
+}
+
+.product-color.hong {
+    background: pink;
+}
+
+.product-color.do {
+    background: red;
+}
+
+.product-color.nau {
+    background: brown;
+}
+
+.product-color.tim {
+    background: purple;
+}
+
+.product-color.xanh {
+    background: blue;
+}
