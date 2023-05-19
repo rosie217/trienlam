@@ -5,41 +5,40 @@ use common\models\Title;
 
 /** @var yii\web\View $this
  * @var Image[] $Images
- * @var Image   $Image
- * @var string  $banner_image
+ * @var Image $Image
+ * @var string $banner_image
+ * @var string $title_name
  */
 $this->title = 'Hội sinh viên Trường Đại học Mở Hà Nội';
 ?>
-<div class="aurel_main_wrapper aurel_top_padding_no aurel_bottom_padding_no">
-	<div class="aurel_container">
-		<div class="aurel_content_wrapper row aurel_no_sidebar">
-			<div class="aurel_content col col-12">
-				<div class="aurel_tiny">
-					<div class="row aurel_js_bg_image aurel_js_min_height aurel_bg_center_center aurel_bg_size_cover aurel_pf_fullwidth" data-src="<?= $banner_image ?>" data-min-height="450">
-					</div>
-					<div class="row aurel_pf_fullwidth">
-						<div class="col col-12">
-							<div class="aurel_widget_pm_grid_gallery">
-								<div class="aurel_widget_container">
-									<div class="aurel_front_end_display">
-										<div class="aurel_grid_wrapper aurel_photoswipe_wrapper aurel_grid_007" data-uniqid="007" data-perload="4">
-											<div class="aurel_grid_inner aurel_isotope_trigger is_masonry grid_columns4 hover_type_solid_plus side_paddings_off" data-perload="4" data-pad="30">
-												<?php foreach ($Images as $Image): ?>
-													<div class="grid-item element grid_b2p">
-														<div class="grid-item-inner">
-															<img src="<?php echo urldecode($Image->image_url) ?>" class="grid_thmb" alt=""/>
-														</div>
-													</div>
-												<?php endforeach; ?>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+<header class="pm_header fixed_header">
+    <div class="pm_fleft">
+        <h3 style="margin: 0"><?=$title_name?></h3>
+    </div>
+</header>
+<div class="pm_album_tape">
+    <div class="pm_fullscreen_toggler"></div>
+    <div class="pm_navigation_container">
+        <div class="pm_prev_slide_button">
+            <div class="pm_prev_thumb_cont"></div>
+            <div class="pm_prev_button_fader"></div>
+        </div>
+        <div class="pm_pause_button"></div>
+        <div class="pm_next_slide_button">
+            <div class="pm_next_thumb_cont"></div>
+            <div class="pm_next_button_fader"></div>
+        </div>
+    </div>
+
+    <div class="pm_gallery_container gallery_tape">
+        <div class="pm_gallery">
+            <?php foreach ($Images as $key => $Image):?>
+            <div class="pm_gallery_item" id="item_<?=$key+1?>" data-number="<?=$key+1?>"
+                 data-thumbnail="<?= $Image->image_url?>">
+                <img src="<?=$Image->image_url?>" alt="Pines"/>
+            </div>
+            <?php endforeach;?>
+        </div><!-- pm_gallery -->
+        <div class="clear"></div>
+    </div><!-- pm_gallery_container -->
 </div>
