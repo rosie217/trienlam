@@ -933,15 +933,15 @@ header .pm_share_button {
 }
 
 .pm_fullscreen_toggler:hover {
-    background: #111314 url("../img/fullscreen_button_hover.gif") no-repeat center;
+    background: #111314 url("/images/fullscreen_button_hover.gif") no-repeat center;
 }
 
 .pm_fullscreen_toggler.active {
-    background-image: url("../img/fullscreen_button_active_back.png");
+    background-image: url("/images/fullscreen_button_active_back.png");
 }
 
 .pm_fullscreen_toggler.active:hover {
-    background-image: url("../img/fullscreen_button_active_hover.gif");
+    background-image: url("/images/fullscreen_button_active_hover.gif");
 }
 
 .pm_navigation_container {
